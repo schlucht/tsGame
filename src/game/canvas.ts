@@ -12,10 +12,11 @@ export class Canvas{
         this.canvas.width = width;
         this.canvas.height = height;
         this.size = new Size(this.canvas.width, this.canvas.height);
+        
 
     }
 
     clear() {
-        this.ctx.clearRect(0,0,this.size.width, this.size.height);
+        this.ctx.clearRect(0, 0, this.size.width, this.size.height);
     }
 }

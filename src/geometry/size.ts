@@ -1,6 +1,8 @@
 export class Size {
-    public constructor(public width: number, public height: number) {
-        this.width = width;
-        this.height = height;
+    public constructor(public Width: number, public Height: number) {      
+    }
+
+    public toString(): string {
+        return `Width: ${this.Width}, Height: ${this.Height}`;
     }
 }

@@ -17,6 +17,6 @@ export class Canvas{
     }
 
     clear() {
-        this.ctx.clearRect(0, 0, this.size.width, this.size.height);
+        this.ctx.clearRect(0, 0, this.size.Width, this.size.Height);
     }
 }

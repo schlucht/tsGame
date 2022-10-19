@@ -1,11 +1,35 @@
 export class Point {
-    p: Point;
-    constructor(public x: number, public y: number){
-        this.p = new Point(x, y);
+ 
+    constructor(public X: number, public Y: number){           
     }
 
-    public Add(p: Point): Point {
-        this.p = new Point(this.p.x + p.x, this.p.y + p.y);
-        return this.p;
+    /**
+     * Added and new Point to this
+     * @param p new Point for added
+     * @returns this new Point
+     */
+    public Add(p: Point): Point {        
+        this.X = this.X + p.X
+        this.Y = this.Y + p.Y;       
+        return this;
+    }
+    public Del(p: Point): Point {
+        this.X = this.X - p.X;
+        this.Y = this.Y - p.Y;        
+        return this;
+    }
+    public Scale(f: number): Point {        
+        this.X = this.X * f;
+        this.Y =  this.Y * f;
+        return this;
+    }
+    public Div (f: number): Point {
+        if (f <= 0) return this;
+        this.X = this.X / f;
+        this.Y = this.Y / f;
+        return this;
+    }
+    public toString(): string {
+        return `X: ${this.X}, Y: ${this.Y}`;
     }
 }

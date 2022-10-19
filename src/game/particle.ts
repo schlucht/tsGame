@@ -2,11 +2,12 @@ import { Point } from "../geometry/point";
 import { Rect } from "../geometry/rect";
 
 export class Particle {
+    speed: Point;
     constructor(
         public rect: Rect,
         public color: string = 'black'
     ) {
-
+        this.speed = new Point(1,1);
     }
 
     public draw(context: CanvasRenderingContext2D) {
@@ -18,8 +19,10 @@ export class Particle {
             this.rect.size.height);
     }
 
-    public update(p: Point): void {
-        this.rect.point.x += p.x;
-        this.rect.point.y += p.y;
+    public update(): void {
+        
+        this.rect.point.x += 1;
+        this.rect.point.y += 1;
+        
     }
 }

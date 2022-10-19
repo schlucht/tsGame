@@ -8,16 +8,14 @@ import { Particle } from "./particle";
 export class Game {
 
     particles: Particle[] = [];
+    image: HTMLImageElement;
+    imgPos: Point;
     constructor (public canvas: Canvas) {
-        this.canvas.canvas.addEventListener('mousemove', (e: MouseEvent) => {
-            this.particles.forEach(particle => {
-                if (particle.rect.point.x > e.clientX + 10) {
-                    particle.color = `rgb(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255})`;
-                    particle.update(new Point(55, 16));  
-                    particle.draw(canvas.ctx)                  
-                }
-            })
-        })
+        this.image = document.getElementById('image1')! as HTMLImageElement;
+        this.imgPos = new Point(
+            this.canvas.size.width * 0.5 - this.image.width * 0.5,
+            this.canvas.size.height * 0.5 -  this.image.height * 0.5
+        )        
     }
 
     public init(){
@@ -33,7 +31,10 @@ export class Game {
 
     public draw(){
         this.particles.forEach(particle => particle.draw(this.canvas.ctx))
-        this.particles.forEach(particle => particle.update(new Point(5,5)))
+        this.canvas.ctx.drawImage(this.image, this.imgPos.x, this.imgPos.y);
+    }
+    public update() {
+        this.particles.forEach(particle => particle.update());
     }
     
 }

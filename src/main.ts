@@ -5,9 +5,11 @@ import './style.css'
 const cv = new Canvas('canvas1', window.innerWidth, window.innerHeight);
 const game = new Game(cv);
 game.init();
-game.draw();
 function animate() {
-    
+    cv.clear();    
+    game.draw();
+    game.update();
+    window.requestAnimationFrame(animate);
 }
 
 animate();

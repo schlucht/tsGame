@@ -1,0 +1,33 @@
+:root {
+    --fontFamily: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    --bg-color: #0b011d;
+    --primary: rgb(255, 115, 0); 
+    --light: #efefef;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    font-size: 62.5%;
+  }
+
+  body {
+    font-size: 1.6rem;
+    font-family: var(--fontFamily);
+    line-height: 1.5;
+    font-weight: 400;
+  }
+  
+  h1, h2, h3, h4, h5 {
+    font-family: 'Arial Narrow Bold', sans-serif;
+    font-weight: 300;
+  }
+  h1 {
+    font-size: 4.8rem;
+  }
+  
+  

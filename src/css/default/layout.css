@@ -1,0 +1,11 @@
+header {
+    background-color: var(--bg-color);
+    height: 25vh;
+}
+header h1 {
+    color: var(--primary);
+    text-align: center;
+    border-bottom: dotted 1px var(--primary);
+    margin-bottom: 2rem;
+}
+

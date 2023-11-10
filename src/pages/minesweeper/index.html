@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTS-Minesweeper</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js" type="module"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>OTS-Minesweeper</h1>
+        <div class="panel">
+            <fieldset class="control">
+                <label to="fieldCount">Anzahl Felder</label>
+                <input id="fieldCount" type="number" min="2" max="10" value="8">
+            </fieldset>
+            <fieldset class="control">
+                <p><span class="label">Blocker: </span><span id="blocker" class="res"></span></p>                
+                <p><span class="label">Clicks: </span><span id="click" class="res"></span></p>                
+            </fieldset>
+            <fieldset class="control">
+                <button type="button" id="btnNew">Neu</button>
+                <button type="button" id="btnReset">Lösen</button>
+            </fieldset>
+        </div>
+        <div class="cvCanvas">
+            <div class="canvas"></div>
+            <div class="gameover"><span>Game Over</span></div>
+        </div>
+    </div>
+</body>
+
+</html>
